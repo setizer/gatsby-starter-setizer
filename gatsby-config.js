@@ -1,10 +1,19 @@
+const config = require("./config.json");
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Gatsby Setizer Starter`,
+    description: `Starter pack for a SetizerCMS project with Gatsby.`,
+    author: `@setizer`,
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-setizer',
+      options: {
+        url: config.URL,
+        token: config.TOKEN,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
