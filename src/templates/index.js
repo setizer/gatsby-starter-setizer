@@ -3,16 +3,13 @@ import { Link } from "gatsby";
 
 import { Button } from 'antd';
 
-import App from "../components/app";
-import SEO from "../components/seo";
+import Layout from "../components/layout";
 
 const IndexPage = props => {    
     const {pageContext} = props;
-
+    
     return (
-        <App>
-            <SEO title={pageContext.title} lang={pageContext.currentLanguage} />
-            
+        <Layout {...props}>    
             <h1>Hi people,</h1>
             <p>Welcome to your new Gatsby site.</p>
             <p>Now go build something great.</p>
@@ -22,7 +19,7 @@ const IndexPage = props => {
                 <Link to="/en">English</Link>
             </Button>
             <Link to="/fr">French</Link>
-        </App>
+        </Layout>
     );
 }
 
