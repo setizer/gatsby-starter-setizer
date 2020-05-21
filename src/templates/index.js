@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import { Button } from 'antd';
-
 import Layout from "../components/layout";
+import {Button} from "@setizer/ui";
 
 const IndexPage = props => {    
     const {pageContext} = props;
@@ -15,10 +14,8 @@ const IndexPage = props => {
             <p>Now go build something great.</p>
 
             {/* GROUPS LINK LANGUAGES */}
-            <Button>
-                <Link to="/en">English</Link>
-            </Button>
-            <Link to="/fr">French</Link>
+            <Button><Link to="/en">English</Link></Button>
+            <Button><Link to="/fr">French</Link></Button>
         </Layout>
     );
 }

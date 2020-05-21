@@ -14,10 +14,6 @@ module.exports = {
         token: config.TOKEN,
       },
     },
-    { 
-      resolve: `gatsby-plugin-less`, 
-      options: { javascriptEnabled: true },
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
